@@ -12,7 +12,7 @@
 ## 安装
 
 ```bash
-npm install -g macos-keyboard-mouse-controller
+npm install -g keyboard-mouse-controller-macos
 ```
 
 ## 使用方法
@@ -86,11 +86,7 @@ npm install
 npm run build
 ```
 
-### 运行测试
 
-```bash
-npm test
-```
 
 ## 注意事项
 

@@ -19,7 +19,7 @@ program
   .command('hello')
   .description('输出 Hello World')
   .action(() => {
-    console.log('Hello World from macos-keyboard-mouse-controller!');
+    console.log('Hello World from keyboard-mouse-controller-macos!');
   });
 
 program

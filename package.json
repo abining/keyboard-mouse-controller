@@ -1,16 +1,22 @@
 {
-  "name": "macos-keyboard-mouse-controller",
-  "version": "0.1.0",
+  "name": "keyboard-mouse-controller-macos",
+  "version": "0.1.1",
   "description": "一个用于 macOS 系统的命令行工具，可以监听键盘事件并控制鼠标（触控板）移动",
   "main": "dist/index.js",
   "bin": {
     "kmc": "./dist/index.js"
   },
+  "files": [
+    "dist",
+    "package.json",
+    "README.md",
+    "src",
+    "docs"
+  ],
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "ts-node src/index.ts",
-    "test": "jest",
     "lint": "eslint . --ext .ts"
   },
   "keywords": [
@@ -21,7 +27,7 @@
     "automation",
     "cli"
   ],
-  "author": "",
+  "author": "abining",
   "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.2",

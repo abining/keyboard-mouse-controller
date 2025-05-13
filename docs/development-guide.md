@@ -34,8 +34,8 @@ git config --global user.email "你的邮箱"
 
 ### 1. 创建项目目录
 ```bash
-mkdir macos-keyboard-mouse-controller
-cd macos-keyboard-mouse-controller
+mkdir keyboard-mouse-controller-macos
+cd keyboard-mouse-controller-macos
 ```
 
 ### 2. 初始化 Git 仓库
@@ -86,7 +86,7 @@ npm install --save-dev jest @types/jest ts-jest
 
 ### 1. 项目结构
 ```
-macos-keyboard-mouse-controller/
+keyboard-mouse-controller-macos/
 ├── src/
 │   ├── index.ts          # 入口文件
 │   ├── keyboard.ts       # 键盘监听模块

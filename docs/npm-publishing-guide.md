@@ -28,7 +28,7 @@ npm login
 ### 3. 检查包名可用性
 ```bash
 # 检查包名是否可用
-npm search macos-keyboard-mouse-controller
+npm search keyboard-mouse-controller-macos
 ```
 
 ## 包的基本要求
@@ -36,7 +36,7 @@ npm search macos-keyboard-mouse-controller
 ### 1. package.json 必要字段
 ```json
 {
-  "name": "macos-keyboard-mouse-controller",
+  "name": "keyboard-mouse-controller-macos",
   "version": "1.0.0",
   "description": "包描述",
   "main": "dist/index.js",
