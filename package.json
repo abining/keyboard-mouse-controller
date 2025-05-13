@@ -1,6 +1,6 @@
 {
   "name": "keyboard-mouse-controller-macos",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "一个用于 macOS 系统的命令行工具，可以监听键盘事件并控制鼠标（触控板）移动",
   "main": "dist/index.js",
   "bin": {
