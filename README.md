@@ -1,14 +1,13 @@
-# macos-keyboard-mouse-controller
+# macOS 键盘鼠标控制器
 
-一个用于 macOS 系统的命令行工具，可以监听键盘事件并控制鼠标（触控板）移动。
+一个用于 macOS 的键盘鼠标控制工具，支持记录鼠标点击位置和键盘快捷键控制。
 
-## 功能特点
+## 功能特性
 
-- 全局键盘事件监听
-- 鼠标/触控板移动控制
-- 命令行界面
-- 可配置的按键映射
-- 支持自定义动作
+- 记录鼠标点击位置
+- 支持多屏幕配置
+- 键盘快捷键控制鼠标移动
+- CSV 格式导出点击记录
 
 ## 安装
 
@@ -18,59 +17,86 @@ npm install -g macos-keyboard-mouse-controller
 
 ## 使用方法
 
+### 1. 记录鼠标点击位置
+
 ```bash
-# 启动监听
-kmc start
+# 使用默认文件名记录鼠标点击
+kmc record
 
-# 配置按键映射
-kmc config
-
-# 查看帮助
-kmc --help
+# 指定输出文件记录鼠标点击
+kmc record --output my-clicks.csv
 ```
 
-## 配置示例
+记录的数据将保存为 CSV 格式，包含以下字段：
+- timestamp: 时间戳
+- x: X 坐标
+- y: Y 坐标
+- click_count: 点击次数
+- screen_id: 屏幕 ID（0 为副屏，1 为主屏）
 
-```json
-{
-  "keyMappings": {
-    "ctrl+alt+up": "mouse-up",
-    "ctrl+alt+down": "mouse-down",
-    "ctrl+alt+left": "mouse-left",
-    "ctrl+alt+right": "mouse-right"
-  }
-}
+### 2. 键盘控制功能
+
+```bash
+# 启动键盘控制
+kmc keyboard
+
+# 停止键盘控制
+kmc keyboard --stop
+# 或
+kmc keyboard -s
+```
+
+键盘控制功能支持以下快捷键：
+- Option + Q: 在屏幕之间切换鼠标位置
+  - 第一次按下：移动到副屏中心
+  - 第二次按下：移动到主屏中心
+  - 以此类推
+
+### 3. 其他命令
+
+```bash
+# 显示版本信息
+kmc --version
+
+# 显示帮助信息
+kmc --help
+
+# 显示特定命令的帮助信息
+kmc record --help
+kmc keyboard --help
 ```
 
 ## 开发
 
+### 环境要求
+
+- Node.js >= 14
+- npm >= 6
+- macOS 操作系统
+
+### 安装依赖
+
 ```bash
-# 克隆仓库
-git clone https://github.com/yourusername/macos-keyboard-mouse-controller.git
-
-# 安装依赖
 npm install
+```
 
-# 运行测试
-npm test
+### 构建
 
-# 构建
+```bash
 npm run build
 ```
 
-## 技术栈
+### 运行测试
 
-- Node.js
-- robotjs - 用于鼠标控制
-- node-global-key-listener - 用于键盘事件监听
-- commander - 命令行界面
-- TypeScript - 类型安全
+```bash
+npm test
+```
 
 ## 注意事项
 
-- 本工具仅支持 macOS 系统
-- 需要授予辅助功能权限
-- 建议在使用前备份重要数据
+1. 首次运行时可能需要授予辅助功能权限
+2. 确保已正确配置多屏幕设置
+3. 使用 Ctrl+C 可以随时停止记录或键盘控制
 
 ## 许可证
 
