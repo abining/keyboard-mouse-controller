@@ -1,0 +1,50 @@
+{
+  "name": "macos-keyboard-mouse-controller",
+  "version": "0.1.0",
+  "description": "一个用于 macOS 系统的命令行工具，可以监听键盘事件并控制鼠标（触控板）移动",
+  "main": "dist/index.js",
+  "bin": {
+    "kmc": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "test": "jest",
+    "lint": "eslint . --ext .ts"
+  },
+  "keywords": [
+    "macos",
+    "keyboard",
+    "mouse",
+    "trackpad",
+    "automation",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "robotjs": "^0.6.0",
+    "node-global-key-listener": "^0.1.1",
+    "chalk": "^4.1.2",
+    "conf": "^10.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/jest": "^29.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "os": [
+    "darwin"
+  ]
+} 
